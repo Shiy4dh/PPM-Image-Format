@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <fstream>
 
@@ -9,9 +11,17 @@ std::string getFilePath()
 	std::cout << "Example:" << '\n';
 	std::cout << "C:/Users/Name/imageName.ppm" << '\n';
 	std::cout << '\n';
-	std::cout << "paste/type your filepath along with filename and extension(.ppm):";
-	std::string filepath{};
-	std::cin >> filepath;
+	std::cout << "filepath:";
+	std::string path{};
+	std::cin >> path;
 
+	// save the image name
+	std::cout << "Type the name of the image you want it to be saved as:\n";
+	std::cout << "Save as :";
+	std::string imageName{};
+	std::cin >> imageName;
+
+
+	std::string filepath = path + "\\" + imageName + ".ppm";
 	return filepath;
 }
