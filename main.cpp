@@ -17,6 +17,8 @@ int main()
 		std::cout << "Filepath cannot be Empty!" << '\n';
 	}
 
+	image.open(filepath);
+
 	if (!std::filesystem::exists(filepath))
 	{
 		std::cout << "Invalid File Path!" << '\n';
@@ -24,7 +26,7 @@ int main()
 	}
 
 
-	image.open(filepath);
+	
 	if (image.is_open())
 	{
 		std::cout << "Image file has been Created Successfully!" << '\n';
@@ -40,7 +42,7 @@ int main()
 	{
 		for (int x{ 0 }; x < 200; ++x)
 		{
-			image << x << ' ' <<  x  << ' ' << x << std::endl;
+			image << x   << ' ' <<  x  << ' ' << x << std::endl;
 		}
 	}
 
